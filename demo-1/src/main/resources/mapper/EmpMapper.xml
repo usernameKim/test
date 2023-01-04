@@ -17,5 +17,6 @@
 	</select>
 	
 	<insert id="empInsert">
+		INSERT
 	</insert>
 </mapper>
