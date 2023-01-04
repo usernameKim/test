@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<!-- 타임리프는 templates파일에 -->
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<thead>
+		 	<tr>
+				<th>사원번호</th>
+				<th>이름</th>
+				<th>성</th>		
+				<th>입사일자</th>			
+			</tr>	
+		</thead>
+		<tbody>
+			<!-- ${empList}는 controller의 model속성에 있는 이름 -->
+			<tr th:each="emp : ${empList}"> <!-- 배열은 왼쪽 -->
+				<td th:text=${emp.employeeId}></td>
+				<td th:text=${emp.firstName}></td>
+				<td th:text=${emp.LastName}></td>
+				<td th:text=${emp.hireDate}></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

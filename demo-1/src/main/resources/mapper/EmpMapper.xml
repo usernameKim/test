@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper.dtd를 적어줘야 인식 -->
+<!-- xml -> interface -->
+<mapper namespace="com.example.demo.emp.mapper.EmpMapper">
+<select id="getEmpList" resultType="EmpVO"> <!-- 조회해서 담을 타입만 지정 -->
+	SELECT rownum id, e.* 
+	FROM employees e
+</select>
+</mapper>
